@@ -1,0 +1,18 @@
+
+supplier.item.list.label.title	= Title
+supplier.item.list.label.creationMoment = Creation moment
+
+
+
+
+
+supplier.item.form.label.title	= Title
+supplier.item.form.label.ticker	= Ticker
+supplier.item.form.label.price = Price
+supplier.item.form.label.itemCategory = Item category
+supplier.item.form.label.descriptionText	= Description text
+supplier.item.form.label.additionalInformation	= Additional information
+supplier.item.form.label.creationMoment = Creation moment
+supplier.item.form.label.photo	= Photo
+
+supplier.item.form.button.return = Return

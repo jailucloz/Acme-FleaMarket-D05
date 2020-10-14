@@ -1,0 +1,14 @@
+
+supplier.request.list.label.ticker	= Ticker
+supplier.request.list.label.creationMoment = Momento de creación
+
+
+supplier.request.form.label.ticker	= Ticker
+supplier.request.form.label.creationMoment = Momento de creación
+supplier.request.form.label.quantity = Cantidad
+supplier.request.form.label.descriptionText	= Texto de descripción
+supplier.request.form.label.notes	= Notas
+supplier.request.form.label.item.ticker	= Ticker del artículo
+supplier.request.form.label.item.title	= Título del artículo
+
+supplier.request.form.button.return = Volver
