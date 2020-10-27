@@ -44,7 +44,11 @@ master.menu.anonymous.bulletin = Bulletins
 master.menu.anonymous.bulletin.lucas = Lucas Bulletin
 master.menu.anonymous.bulletin.lucas.create = Create Lucas Bulletin
 
+
+
+
 # master.menu.administrator ###################################################
+
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
@@ -108,6 +112,10 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.supplier = Supplier data
+master.menu.user-account.become-supplier = Become a supplier
+master.menu.user-account.buyer = Buyer data
+master.menu.user-account.become-buyer = Become a buyer
 
 # master.footer ###############################################################
 
