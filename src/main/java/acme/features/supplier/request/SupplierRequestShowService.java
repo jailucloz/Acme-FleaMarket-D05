@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.requests.RequestItem;
+import acme.entities.requests.RequestStatus;
 import acme.entities.roles.Supplier;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -43,7 +44,11 @@ public class SupplierRequestShowService implements AbstractShowService<Supplier,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "notes", "item.ticker", "item.title");
+		if (entity.getStatus().equals(RequestStatus.PENDING)) {
+			model.setAttribute("isPending", true);
+		}
+
+		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "notes", "item.ticker", "item.title", "rejectJustification");
 	}
 
 	@Override

@@ -232,12 +232,13 @@
 		<property name="ticker" value="AAA-19-123456" />
 		<property name="title" value="Sample item 01" />
 		<property name="itemCategory" value="Category 01" />
-		<property name="creationMoment" value="2019/04/20 14:30" />
+		<property name="creationMoment" value="2020/10/26 14:30" />
 		<property name="descriptionText" value="This is the first description" />
 		<property name="price" value="130.00 €" />
 		<property name="additionalInformation" value="https://www.moreinfo.com" />
 		<property name="photo" value="https://www.photo01.com" />
 		<property name="supplier" ref="supplier1Supplier" />
+		<property name="finalMode" value="true"/>
 
 	</bean>
 
@@ -252,6 +253,7 @@
 		<property name="additionalInformation" value="https://www.moreinfo.com" />
 		<property name="photo" value="https://www.photo01.com" />
 		<property name="supplier" ref="supplier1Supplier" />
+		<property name="finalMode" value="false"/>
 
 	</bean>
 
@@ -265,6 +267,7 @@
 		<property name="additionalInformation" value="https://www.moreinfo.com" />
 		<property name="photo" value="https://www.photo01.com" />
 		<property name="supplier" ref="supplier2Supplier" />
+		<property name="finalMode" value="true"/>
 
 	</bean>
 
@@ -313,6 +316,7 @@
 		<property name="additionalInformation" value="https://www.moreinfo.com" />
 		<property name="photo" value="https://www.photo02.com" />
 		<property name="supplier" ref="supplier2Supplier" />
+		<property name="finalMode" value="true"/>
 
 	</bean>
 
@@ -326,6 +330,7 @@
 		<property name="additionalInformation" value="https://www.moreinfo.com" />
 		<property name="photo" value="https://www.photo03.com" />
 		<property name="supplier" ref="supplier2Supplier" />
+		<property name="finalMode" value="false"/>
 
 	</bean>
 
@@ -368,8 +373,10 @@
 	<bean id="request01" class="acme.entities.requests.RequestItem">
 		<property name="ticker" value="ABA-19-123456" />
 		<property name="notes" value="Sample notes 01" />
+		<property name="status" value="PENDING" />
 		<property name="quantity" value="121" />
 		<property name="creationMoment" value="2019/04/20 14:30" />
+		<property name="rejectJustification"><null/></property>
 		<property name="supplier" ref="supplier1Supplier" />
 		<property name="item" ref="item01" />
 		<property name="buyer" ref="buyer1Buyer" />
@@ -380,8 +387,10 @@
 	<bean id="request02" class="acme.entities.requests.RequestItem">
 		<property name="ticker" value="ABC-19-223456" />
 		<property name="notes" value="Sample notes 02" />
+		<property name="status" value="PENDING" />
 		<property name="quantity" value="121" />
 		<property name="creationMoment" value="2019/04/27 14:30" />
+		<property name="rejectJustification"><null/></property>
 		<property name="supplier" ref="supplier1Supplier" />
 		<property name="item" ref="item04" />
 		<property name="buyer" ref="buyer1Buyer" />
@@ -391,8 +400,10 @@
 	<bean id="request03" class="acme.entities.requests.RequestItem">
 		<property name="ticker" value="ABV-19-423456" />
 		<property name="notes" value="Sample notes 03" />
+		<property name="status" value="PENDING" />
 		<property name="quantity" value="121" />
-		<property name="creationMoment" value="2019/09/20 14:30" />
+		<property name="creationMoment" value="2020/10/23 14:30" />
+		<property name="rejectJustification"><null/></property>
 		<property name="supplier" ref="supplier1Supplier" />
 		<property name="item" ref="item05" />
 		<property name="buyer" ref="buyer1Buyer" />
@@ -403,8 +414,10 @@
 	<bean id="request04" class="acme.entities.requests.RequestItem">
 		<property name="ticker" value="ABZ-19-623656" />
 		<property name="notes" value="Sample notes 04" />
+		<property name="status" value="PENDING" />
 		<property name="quantity" value="121" />
 		<property name="creationMoment" value="2016/01/27 14:30" />
+		<property name="rejectJustification"><null/></property>
 		<property name="supplier" ref="supplier2Supplier" />
 		<property name="item" ref="item04" />
 		<property name="buyer" ref="buyer1Buyer" />
@@ -414,8 +427,10 @@
 	<bean id="request05" class="acme.entities.requests.RequestItem">
 		<property name="ticker" value="AZV-19-421456" />
 		<property name="notes" value="Sample notes 05" />
+		<property name="status" value="PENDING" />
 		<property name="quantity" value="121" />
 		<property name="creationMoment" value="2010/10/10 11:31" />
+		<property name="rejectJustification"><null/></property>
 		<property name="supplier" ref="supplier2Supplier" />
 		<property name="item" ref="item05" />
 		<property name="buyer" ref="buyer1Buyer" />

@@ -25,6 +25,9 @@ public class BuyerRequestController extends AbstractController<Buyer, RequestIte
 	@Autowired
 	private BuyerRequestShowService		showService;
 
+	@Autowired
+	private BuyerRequestCreateService	createService;
+
 
 	// Constructors -----------------------------------------------------------
 
@@ -32,6 +35,7 @@ public class BuyerRequestController extends AbstractController<Buyer, RequestIte
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
 }

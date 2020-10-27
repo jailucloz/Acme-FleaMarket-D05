@@ -45,6 +45,11 @@ public class RequestItem extends DomainEntity {
 
 	private String				notes;
 
+	private String				rejectJustification;
+
+	@NotNull
+	private RequestStatus		status;
+
 	// Relationships
 	@NotNull
 	@Valid

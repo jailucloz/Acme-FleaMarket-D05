@@ -43,7 +43,7 @@ public class BuyerRequestShowService implements AbstractShowService<Buyer, Reque
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "notes");
+		request.unbind(entity, model, "ticker", "creationMoment", "quantity", "notes", "status");
 	}
 
 	@Override

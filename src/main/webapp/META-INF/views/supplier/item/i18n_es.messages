@@ -14,5 +14,12 @@ supplier.item.form.label.descriptionText	= Texto de descripción
 supplier.item.form.label.additionalInformation	= Información adicional 
 supplier.item.form.label.creationMoment = Momento de creación
 supplier.item.form.label.photo	= Foto
+supplier.item.form.label.finalMode = Modo final 
 
 supplier.item.form.button.return = Volver
+supplier.item.form.button.delete = Eliminar
+supplier.item.form.button.update = Actualizar
+supplier.item.form.button.create = Crear
+
+errors.item.finalMode = Un artículo puede ser eliminado siempre y cuando esté en modo borrador
+errors.item.hasRequestItems = Un artículo puede ser eliminado siempre y cuando no esté envuelto en ninguna petición

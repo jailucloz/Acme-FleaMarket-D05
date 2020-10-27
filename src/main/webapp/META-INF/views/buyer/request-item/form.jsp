@@ -15,14 +15,21 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form readonly="true">
+<acme:form>
 	
-	<acme:form-textbox code="buyer.request.form.label.ticker" path="ticker"/>
-	<acme:form-textbox code="buyer.request.form.label.creationMoment" path="creationMoment"/>
-	<acme:form-textbox code="buyer.request.form.label.quantity" path="quantity"/>
-	<acme:form-textbox code="buyer.request.form.label.notes" path="notes"/>
-	
-	
-	
-	<acme:form-return code="buyer.request.form.button.return"/>
+	<acme:form-textbox code="buyer.request.form.label.ticker" path="ticker" />
+
+	<jstl:if test="${command != 'create' }">
+		<acme:form-textbox code="buyer.request.form.label.creationMoment" path="creationMoment" />
+		<acme:form-textbox code="buyer.request.form.label.status" path="status" />
+	</jstl:if>
+
+	<acme:form-textbox code="buyer.request.form.label.quantity" path="quantity" />
+	<acme:form-textbox code="buyer.request.form.label.notes" path="notes" />
+
+
+
+	<acme:form-submit test="${command == 'create'}" code="buyer.request.form.buttom.create"
+		action="/buyer/request-item/create?id=${itemId}" />
+	<acme:form-return code="buyer.request.form.button.return" />
 </acme:form>

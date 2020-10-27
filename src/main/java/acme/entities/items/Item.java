@@ -25,6 +25,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+//@Table(indexes = @Index(columnList = "ticker"))
+
 public class Item extends DomainEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -57,6 +59,9 @@ public class Item extends DomainEntity {
 
 	@URL
 	private String				photo;
+
+	@NotNull
+	private Boolean				finalMode;
 
 	// Relationship
 

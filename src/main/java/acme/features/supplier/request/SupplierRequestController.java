@@ -23,15 +23,29 @@ public class SupplierRequestController extends AbstractController<Supplier, Requ
 	private SupplierRequestListMineService	listMineService;
 
 	@Autowired
+	private SupplierRequestListOrderService	listOrderService;
+
+	@Autowired
 	private SupplierRequestShowService		showService;
+
+	@Autowired
+	private SupplierRequestAcceptService	acceptService;
+
+	@Autowired
+	private SupplierRequestRejectService	rejectService;
 
 
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
 	private void initialise() {
+		super.addCustomCommand(CustomCommand.LIST_ORDER, BasicCommand.LIST, this.listOrderService);
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+
+		super.addCustomCommand(CustomCommand.ACCEPT, BasicCommand.UPDATE, this.acceptService);
+		super.addCustomCommand(CustomCommand.REJECT, BasicCommand.UPDATE, this.rejectService);
+
 	}
 
 }

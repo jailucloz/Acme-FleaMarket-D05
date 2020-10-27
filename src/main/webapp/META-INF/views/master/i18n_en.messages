@@ -75,6 +75,19 @@ master.menu.authenticated.advertisement.list= Advertisement list
 master.menu.authenticated.suggestion.list = Suggestion list
 master.menu.authenticated.figment.list = Figment list
 
+# master.menu.supplier ########################################################
+
+master.menu.supplier = Supplier
+master.menu.supplier.list.item = Items list
+master.menu.supplier.list.item.create = Create item
+master.menu.supplier.list.request = Requests list
+master.menu.supplier.list.requestOrder = Request order list
+
+# master.menu.buyer ########################################################
+
+master.menu.buyer = Buyer
+master.menu.buyer.list.item = Items list
+master.menu.buyer.list.request = Requests list
 
 
 # master.menu.provider ########################################################

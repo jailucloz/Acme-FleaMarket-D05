@@ -25,6 +25,15 @@ public class SupplierItemController extends AbstractController<Supplier, Item> {
 	@Autowired
 	private SupplierItemShowService		showService;
 
+	@Autowired
+	private SupplierItemCreateService	createService;
+
+	@Autowired
+	private SupplierItemUpdateService	updateService;
+
+	@Autowired
+	private SupplierItemDeleteService	deleteService;
+
 
 	// Constructors -----------------------------------------------------------
 
@@ -32,6 +41,9 @@ public class SupplierItemController extends AbstractController<Supplier, Item> {
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
 
 }

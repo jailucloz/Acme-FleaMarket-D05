@@ -20,4 +20,8 @@ public interface SupplierRequestRepository extends AbstractRepository {
 
 	@Query("select r from RequestItem r where r.supplier.id = ?1")
 	Collection<RequestItem> findManyBySupplierId(int supplierId);
+
+	@Query("Select r from RequestItem r where r.supplier.id = ?1 order by r.item.ticker, r.item.creationMoment")
+	Collection<RequestItem> findManyRequestBySupplierOrderBy(int employerId);
+
 }
