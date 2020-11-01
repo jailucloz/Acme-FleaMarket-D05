@@ -27,7 +27,7 @@ public class BuyerRequestCreateService implements AbstractCreateService<Buyer, R
 	@Override
 	public boolean authorise(final Request<RequestItem> request) {
 		assert request != null;
-
+		//TODO: Completar
 		//Item item = this.repository.findOneItemById(request.getModel().getInteger("id"));
 
 		//return item == null || item.getFinalMode() == false;
