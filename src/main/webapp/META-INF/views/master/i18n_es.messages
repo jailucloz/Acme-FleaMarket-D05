@@ -70,6 +70,13 @@ master.menu.administrator.advertisement.create = Crear anuncio
 master.menu.administrator.figment.create =  Crear producto
 master.menu.administrator.suggestion.create = Crear sugerencia
 
+master.menu.administrator.material-sheet.list = Lista de hoja de materiales
+master.menu.administrator.advertisement.list = Lista de anuncios
+master.menu.administrator.figment.list =  Lista de productos
+master.menu.administrator.suggestion.list = Lista de sugerencias
+master.menu.administrator.tool-sheet.list  = Lista de hoja de herramientos
+
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
@@ -86,6 +93,7 @@ master.menu.supplier = Proveedor
 master.menu.supplier.item.list-mine = Lista de mis artículos
 master.menu.supplier.request.list-mine = Lista de mis peticiones
 master.menu.supplier.request.list-order = Lista ordenada de peticiones
+master.menu.supplier.item.create = Crear artículo
 
 # master.menu.buyer ##########################################################
 

@@ -32,7 +32,7 @@ public class Sheet extends DomainEntity {
 	 * section in its specification sheet.
 	 */
 
-	@NotBlank
+	@NotNull
 	@Positive
 	@Column(unique = true)
 	private Integer				indexer;

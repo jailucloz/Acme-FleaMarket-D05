@@ -56,19 +56,27 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.administrator.news.create" action="/administrator/news/create"/>
+		<acme:menu-suboption code="master.menu.administrator.news.create" action="/administrator/news/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.news.list" action="/administrator/news/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.material-sheet.create" action="/administrator/material-sheet/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.material-sheet.list" action="/administrator/material-sheet/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.tool-sheet.create" action="/administrator/tool-sheet/create"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.advertisement.create" action="/administrator/advertisement/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.advertisement.list" action="/administrator/advertisement/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.suggestion.create" action="/administrator/suggestion/create"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.suggestion.list" action="/administrator/suggestion/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.figment.create" action="/administrator/figment/create"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.figment.list" action="/administrator/figment/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.customisation.display" action="/administrator/customisation/display"/>
 			<acme:menu-separator/>

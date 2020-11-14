@@ -15,6 +15,7 @@ supplier.item.form.label.additionalInformation	= Información adicional
 supplier.item.form.label.creationMoment = Momento de creación
 supplier.item.form.label.photo	= Foto
 supplier.item.form.label.finalMode = Modo final 
+supplier.item.form.label.sheet = Lista de hoja de especificaciones
 
 supplier.item.form.button.return = Volver
 supplier.item.form.button.delete = Eliminar
