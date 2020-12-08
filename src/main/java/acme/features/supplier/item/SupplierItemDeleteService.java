@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.items.Item;
+import acme.entities.items.Section;
 import acme.entities.requests.RequestItem;
 import acme.entities.roles.Supplier;
-import acme.entities.sheets.Sheet;
 import acme.features.supplier.request.SupplierRequestRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -94,12 +94,12 @@ public class SupplierItemDeleteService implements AbstractDeleteService<Supplier
 		assert request != null;
 		assert entity != null;
 
-		// hay que borrar tambien los requestItems y los Sheet, porque están relacionados con los items
+		// hay que borrar tambien los requestItems y los Section, porque están relacionados con los items
 
 		Collection<RequestItem> requests = this.repository.findRequestByItemId(entity.getId());
 		this.supplierRequestRepository.deleteAll(requests);
-		Collection<Sheet> sheets = this.repository.findSheetByItemId(entity.getId());
-		this.repository.deleteAll(sheets);
+		Collection<Section> sections = this.repository.findSectionByItemId(entity.getId());
+		this.repository.deleteAll(sections);
 
 		this.repository.delete(entity);
 	}

@@ -1,18 +1,16 @@
 
 package acme.entities.sheets;
 
-import javax.persistence.Column;
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
-import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.URL;
-
-import acme.entities.items.Item;
+import acme.entities.items.Section;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,24 +31,36 @@ public class Sheet extends DomainEntity {
 	 * section in its specification sheet.
 	 */
 
+	/*
+	 * @NotNull
+	 *
+	 * @Positive
+	 *
+	 * @Column(unique = true)
+	 * private Integer indexer;
+	 *
+	 * @NotBlank
+	 * private String title;
+	 *
+	 * @NotBlank
+	 *
+	 * @Size(min = 1, max = 256)
+	 * private String description;
+	 *
+	 * @URL
+	 * private String photo;
+	 *
+	 * @NotNull
+	 *
+	 * @Valid
+	 *
+	 * @ManyToOne(optional = false)
+	 * private Item item;
+	 */
+
 	@NotNull
-	@Positive
-	@Column(unique = true)
-	private Integer				indexer;
-
-	@NotBlank
-	private String				title;
-
-	@NotBlank
-	@Size(min = 1, max = 256)
-	private String				description;
-
-	@URL
-	private String				photo;
-
-	@NotNull
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@Valid
-	@ManyToOne(optional = false)
-	private Item				item;
+	public Collection<Section>	sections;
 
 }

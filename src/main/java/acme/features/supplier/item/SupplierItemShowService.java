@@ -23,13 +23,13 @@ public class SupplierItemShowService implements AbstractShowService<Supplier, It
 		assert request != null;
 
 		boolean result;
-		int applicationId;
+		int requestItemId;
 		Item item;
 		Supplier supplier;
 		Principal principal;
 
-		applicationId = request.getModel().getInteger("id");
-		item = this.repository.findOneItemById(applicationId);
+		requestItemId = request.getModel().getInteger("id");
+		item = this.repository.findOneItemById(requestItemId);
 		supplier = item.getSupplier();
 		principal = request.getPrincipal();
 		result = supplier.getUserAccount().getId() == principal.getAccountId();

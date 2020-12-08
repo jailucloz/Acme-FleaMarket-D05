@@ -10,7 +10,7 @@ import acme.framework.repositories.AbstractRepository;
 
 public interface AuthenticatedItemRepository extends AbstractRepository {
 
-	@Query("select sh.item from Sheet sh where sh.item.supplier.id =?1")
+	@Query("select s.item from Section s where s.item.supplier.id =?1")
 	Collection<Item> findItems(int itemId);
 
 	@Query("select i from Item i")

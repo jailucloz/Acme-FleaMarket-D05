@@ -24,3 +24,6 @@ supplier.item.form.label.sheet = Specification sheet list
 
 errors.item.finalMode = An item can be deleted as long as it is in draft mode
 errors.item.hasRequestItems = An item can be deleted if it is not involved in any requests
+
+errors.item.finalMode.unique  = An item cannot be saved in final mode unless the section indexers in its specification sheet are unique
+errors.item.finalMode.spam =  An item cannot be saved in final mode unless specification sheet is not considered spam

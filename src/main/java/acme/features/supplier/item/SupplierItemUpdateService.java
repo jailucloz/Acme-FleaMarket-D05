@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.customisations.Customisation;
 import acme.entities.items.Item;
+import acme.entities.items.Section;
 import acme.entities.roles.Supplier;
-import acme.entities.sheets.Sheet;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -73,7 +73,7 @@ public class SupplierItemUpdateService implements AbstractUpdateService<Supplier
 		if (entity.getFinalMode()) {
 
 			if (!errors.hasErrors("finalMode")) {
-				uniqueIndexer = this.uniqueSheetIndexer(entity.getId());
+				uniqueIndexer = this.uniqueSectionIndexer(entity.getId());
 				errors.state(request, uniqueIndexer, "finalMode", "errors.item.finalMode.unique", "Is finalMode when the indexer is no unique");
 			}
 
@@ -104,20 +104,20 @@ public class SupplierItemUpdateService implements AbstractUpdateService<Supplier
 		this.repository.save(entity);
 	}
 
-	private boolean uniqueSheetIndexer(final Integer itemId) {
+	private boolean uniqueSectionIndexer(final Integer itemId) {
 
-		List<Sheet> sheets = (List<Sheet>) this.repository.findSheetByItemId(itemId);
+		List<Section> sections = (List<Section>) this.repository.findSectionByItemId(itemId);
 		Boolean res = true;
 
-		for (Sheet s : sheets) {
+		for (Section s : sections) {
 
-			for (int i = 0; i < sheets.size(); i++) {
-				if (s.getIndexer().equals(sheets.get(i).getIndexer())) {
+			for (int i = 0; i < sections.size(); i++) {
+				if (s.getIndexer().equals(sections.get(i).getIndexer())) {
 					res = false;
 					break;
+
 				}
 			}
-
 		}
 
 		return res;

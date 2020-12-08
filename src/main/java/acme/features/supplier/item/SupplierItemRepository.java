@@ -7,14 +7,14 @@ import org.springframework.data.jpa.repository.Query;
 
 import acme.entities.customisations.Customisation;
 import acme.entities.items.Item;
+import acme.entities.items.Section;
 import acme.entities.requests.RequestItem;
 import acme.entities.roles.Supplier;
-import acme.entities.sheets.Sheet;
 import acme.framework.repositories.AbstractRepository;
 
 public interface SupplierItemRepository extends AbstractRepository {
 
-	@Query("select sh.item from Sheet sh where sh.item.supplier.id =?1")
+	@Query("select s.item from Section s where s.item.supplier.id =?1")
 	Collection<Item> findItems(int itemId);
 
 	@Query("select i from Item i where i.id =?1")
@@ -29,8 +29,8 @@ public interface SupplierItemRepository extends AbstractRepository {
 	@Query("select s from Supplier s where s.userAccount.id = ?1")
 	Supplier findOneSupplierByUserAccount(int userAccountId);
 
-	@Query("select s from Sheet s where s.item.id = ?1")
-	Collection<Sheet> findSheetByItemId(int itemId);
+	@Query("select s from Section s where s.item.id = ?1")
+	Collection<Section> findSectionByItemId(int itemId);
 
 	@Query("select r from RequestItem r where r.item.id = ?1")
 	Collection<RequestItem> findRequestByItemId(int id);

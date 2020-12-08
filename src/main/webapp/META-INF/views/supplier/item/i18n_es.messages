@@ -24,3 +24,8 @@ supplier.item.form.button.create = Crear
 
 errors.item.finalMode = Un artículo puede ser eliminado siempre y cuando esté en modo borrador
 errors.item.hasRequestItems = Un artículo puede ser eliminado siempre y cuando no esté envuelto en ninguna petición
+
+
+
+errors.item.finalMode.unique  = Un elemento no se puede guardar en modo final a menos que los indexadores de sección en su hoja de especificaciones sean únicos
+errors.item.finalMode.spam =  Un elemento no se puede guardar en modo final a menos la sección en su hoja de especificaciones no se consideren spam

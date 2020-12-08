@@ -44,7 +44,7 @@
 
 	<acme:form-hidden path="id"/>
 
-	<acme:form-submit test="${command != 'create'}" code="supplier.item.form.label.sheet" action="/supplier/sheet/list?id=${id}" method="get"/>
+	<acme:form-submit test="${command != 'create'}" code="supplier.item.form.label.sheet" action="/supplier/section/list?id=${id}" method="get"/>
 	
 	<acme:form-submit test="${command == 'show' && finalMode == false}" code="supplier.item.form.button.update" action="/supplier/item/update"/>
 	<acme:form-submit test="${command == 'show' }" code="supplier.item.form.button.delete" action="/supplier/item/delete"/>

@@ -39,9 +39,17 @@
        drop 
        foreign key `FKc2csi1fre6mjxwc8g5492iqcv`;
 
-    alter table `sheet` 
+    alter table `section` 
        drop 
-       foreign key `FKot1q9gh25o69kcn1fxi26xi2l`;
+       foreign key `FK1p9pdohs3k78gp2gsf86f0fsv`;
+
+    alter table `sheet_section` 
+       drop 
+       foreign key `FK1uvqucipxvh0svbnq59ydko6u`;
+
+    alter table `sheet_section` 
+       drop 
+       foreign key `FKt5i38pyxa8cwughj9v40goy9n`;
 
     alter table `supplier` 
        drop 
@@ -75,7 +83,11 @@
 
     drop table if exists `request_item`;
 
+    drop table if exists `section`;
+
     drop table if exists `sheet`;
+
+    drop table if exists `sheet_section`;
 
     drop table if exists `suggestion`;
 

@@ -155,7 +155,7 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `sheet` (
+    create table `section` (
        `id` integer not null,
         `version` integer not null,
         `description` varchar(255),
@@ -164,6 +164,17 @@
         `title` varchar(255),
         `item_id` integer not null,
         primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sheet` (
+       `id` integer not null,
+        `version` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sheet_section` (
+       `sheet_id` integer not null,
+        `sections_id` integer not null
     ) engine=InnoDB;
 
     create table `suggestion` (
@@ -222,8 +233,11 @@
     alter table `request_item` 
        add constraint UK_4id455fdcp9vi9tvbkh9ufbqk unique (`ticker`);
 
-    alter table `sheet` 
-       add constraint UK_thu576g2p11cn0kexvhv3d5k unique (`indexer`);
+    alter table `section` 
+       add constraint UK_ass7sokvh8np3ga5ql0s62ktd unique (`indexer`);
+
+    alter table `sheet_section` 
+       add constraint UK_pdmo9jgd8gsveh7xm08vc2lay unique (`sections_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -278,10 +292,20 @@
        foreign key (`supplier_id`) 
        references `supplier` (`id`);
 
-    alter table `sheet` 
-       add constraint `FKot1q9gh25o69kcn1fxi26xi2l` 
+    alter table `section` 
+       add constraint `FK1p9pdohs3k78gp2gsf86f0fsv` 
        foreign key (`item_id`) 
        references `item` (`id`);
+
+    alter table `sheet_section` 
+       add constraint `FK1uvqucipxvh0svbnq59ydko6u` 
+       foreign key (`sections_id`) 
+       references `section` (`id`);
+
+    alter table `sheet_section` 
+       add constraint `FKt5i38pyxa8cwughj9v40goy9n` 
+       foreign key (`sheet_id`) 
+       references `sheet` (`id`);
 
     alter table `supplier` 
        add constraint FK_1h83guf8tf3di74bk4uhuo1ia 

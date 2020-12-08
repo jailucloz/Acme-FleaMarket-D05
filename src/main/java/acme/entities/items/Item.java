@@ -2,10 +2,13 @@
 package acme.entities.items;
 
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -71,5 +74,8 @@ public class Item extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Supplier			supplier;
+
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "item")
+	private Set<@Valid Section>	specificationSheet;
 
 }
